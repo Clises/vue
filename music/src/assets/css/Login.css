@@ -1,0 +1,20 @@
+#Login{
+  width: 100%;
+  padding: 20px;
+  margin-top: 3rem;
+}
+.login-content{
+  border-bottom: 1px solid rgb(144,144,144);
+  margin-top: 15px;
+}
+.btn{
+  width: 100%;
+  height: 35px;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 20px;
+  color: #ffffff;
+  background: red;
+  border-radius: 20px;
+  border-width: 0;
+}
