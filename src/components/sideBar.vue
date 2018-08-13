@@ -1,42 +1,58 @@
 <template>
-  <div class="home">
+  <div class="sideBar">
     <transition name="fade" @touchmove.stop.prevent>
       <div class="menu-mask" v-show="isRellyShow" @click="hideSide"></div>
     </transition>
     <transition name="slide-fade">
       <div class="side-content" v-show="isRellyShow">
-        <a class="change">
-          <!--<img src="http://p4.qhimg.com/t0160e6a92121691e22.png" alt=""/>-->
-        </a>
-
+        <div class="top">
+          <img :src="avatarUrl" alt="" class="avatar">
+          <span class="nickname">
+          {{nickname}}
+        </span>
+        </div>
       </div>
     </transition>
   </div>
 
 </template>
 <script>
-  // import {store} from "../store";
+  import {mapGetters} from 'vuex'
   export default {
     data() {
-      return {}
+      return {
+        avatarUrl: '../../static/img/user.png',
+        nickname:''
+      }
     },
+
     methods: {
-      // hideSide: function () {
-      //   this.$store.dispatch('hideSideBar');
-      // },
-      computed: {
-        isRellyShow() {
-          // return this.$store.getters.isShowMethod;
-        }
-
+      hideSide: function () {
+        this.$store.dispatch('hideSideBar');
       },
-      components: {
+    },
+    computed: {
+      ...mapGetters([   //获取 getters
+        'userData',
+      ]),
+      isRellyShow() {
+          return this.$store.getters.isShowMethod;
+        },
 
+    },
+    watch: {
+      'userData': {
+        //添加方法
+        handler: 'changeData',   //绑定 handler方法
+        deep: true  //发现对象内部值的变化
       },
-      mounted() {
-
-      },
-
+    },
+    mounted(){
+      //如果不是第一次加载
+      if(!this.userData.first){
+        this.avatarUrl=this.userData.profile.avatarUrl,
+        this.nickname=this.userData.profile.nickname
+      }
     }
   }
 </script>
@@ -85,31 +101,23 @@
     -webkit-transition: opacity 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out;
   }
-
-  .change {
-    display: block;
-    width: 284px;
+  .top{
+    width: 100%;
     height: 200px;
-    background: url(http://p3.qhimg.com/t0134c65e59012a1257.png) no-repeat center;
-    background-size: cover;
-    border: 1px solid #fff;
-    overflow: hidden;
+    background: black;
+    padding: 20px;
   }
-
-  .change img {
+  .avatar{
+    width: 75px;
+    height: 75px;
     display: block;
-    width: 220px;
-    height: 180px;
-    opacity: 0;
-    -webkit-transform: translate(284px, 200px);
-    transform: translate(284px, 200px);
-    -webkit-transition: opacity 0.5s ease-in-out 0.5s, -webkit-transform 1s ease-in-out;
-    transition: opacity 0.5s ease-in-out 0.5s, transform 1s ease-in-out;
+    border-radius: 50%;
+    background: red;
+    margin-top: 50px;
   }
-
-  .change:hover img {
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-    opacity: 1;
+  .nickname{
+    display: inline-block;
+    color: white;
+    margin-top: 10px;
   }
 </style>

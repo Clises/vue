@@ -20,6 +20,7 @@ export const store=new Vuex.Store({
     isShow:false
   },
   getters:{
+    //用户数据
     userData:state=>state.userData,
     //侧滑
     isShowMethod:state=>state.isShow

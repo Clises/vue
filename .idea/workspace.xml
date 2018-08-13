@@ -3,302 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="35ce6cf8-761d-4866-8c70-f1fdc7d8fe49" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/check-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/vue-loader.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/webpack.base.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/webpack.dev.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/build/webpack.prod.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/config/dev.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/dist.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/Bottom.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/Mine.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/Search.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/Swiper.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/Top.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/discuss.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/list.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/mineList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/personal.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/components/player.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/src/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/backTo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/dis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/music.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/prev.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/search1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/song7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/img/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudMusic-master/static/js/reset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/.idea/dictionaries/edz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/.idea/vue.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/示例.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/绑定html和class/对象语法/不必在模板里定义.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/绑定html和class/对象语法/在模板之中来定义.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/绑定html和class/数组语法/数组语法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/绑定内敛样式/对象语法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/绑定内敛样式/数组语法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-bind/绑定内敛样式/自动添加前缀.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-cloak.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-for/v-for.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-for/一段取值范围的v-for.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-if.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-model.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-on/v-on.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-on/实例.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-once/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-once/v-once.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-once/实例.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-pre.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-show.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/v-text.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.指令/指令.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/指令/explain" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/指令/修饰符.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/指令/参数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/插值/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/插值/使用 js 表达式.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/插值/原始 html.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/插值/文本.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/插值/特性使用 v-bind.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/1.模板语法/缩写/缩写形式.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/2.计算属性和监视器/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/2.计算属性和监视器/侦听器.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/2.计算属性和监视器/侦听属性.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/2.计算属性和监视器/方法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/2.计算属性和监视器/计算属性.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/2.计算属性和监视器/计算属性的 setter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/多重值.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/对象语法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/数组语法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/绑定内敛样式/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/绑定内敛样式/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/3.class 与 style 绑定/自动添加前缀.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/4.条件渲染/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/4.条件渲染/v-else-if.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/4.条件渲染/v-if.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/4.条件渲染/v-show.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/v-for.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/一段取值范围的v-for.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/对象更改检测注意事项.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/数组更新和检测/变异方法-push().html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/数组更新和检测/替换数组.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/数组更新和检测/注意事项.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/5.列表渲染/显示过滤排序结果.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/事件修饰符.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/事件处理方法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/内敛处理器中的方法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/内敛处理器访问原生 dom 事件.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/按键修饰符.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/6.事件处理/监听事件.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/7.表单输入绑定/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/7.表单输入绑定/基础用法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/1.基本实例.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/动态组件.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/在组件上使用 v-model.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/在组件上使用 v-model2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/插槽分发.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/用事件抛出一个值.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/8.组件基础/通过事件向父级组件发送信息.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/9. 深入了解组件/1.组件注册/全局注册.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/9. 深入了解组件/1.组件注册/局部注册.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/9. 深入了解组件/2.prop/prop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/9. 深入了解组件/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/cookback/explain.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/cookback/实例属性.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/demo/demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/demo/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/lib/cdn.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/lib/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/数据和方法/Object.freeze().html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/数据和方法/实例属性和方法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/数据和方法/数据和方法.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/生命周期/声明周期函数.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/生命周期/生命周期.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/组件化应用构建/组件.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/组件化应用构建/组件应用.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/check-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/vue-loader.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/webpack.base.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/webpack.dev.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/build/webpack.prod.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/config/dev.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/config/test.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/api/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/assets/common/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/assets/common/common.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/assets/common/reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/assets/css/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/assets/css/vant.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/header.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/mine.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/play.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/player.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/search.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/sideBar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/components/swiper.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/config/env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/utils/fetch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/src/utils/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/backTo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/dis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/mode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/music.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/prev.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/search1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/song7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/img/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/static/js/reset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe/img/vue 构建目录.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe/item.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe/vue.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe/封装 axios.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe/报错.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe/环境配置.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/scss.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/Life.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/check-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/vue-loader.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/webpack.base.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/webpack.dev.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/build/webpack.prod.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/config/dev.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/config/test.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/assets/css/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/animation/animation.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/api/Map.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/demo/Elasticlayer.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/demo/LoadMore.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/demo/PreviewPicture.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/demo/cehua/home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/demo/cehua/sideBar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/demo/demo.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/frame/Vant/vant.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/getData/Axios.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/getData/Resource.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/getData/getData.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/album/album.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/album/albumDetails.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/article/article.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/article/articleDetails.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/user/user.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/user/userid.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/router/user/userlist.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/transferData/child.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/transferData/parent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/transferData/parentBrother.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/transferData/transferData.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/vuex/count.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/components/vuex/vuex.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/grammar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/model/VueEvent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/test/e2e/custom-assertions/elementCount.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/test/e2e/nightwatch.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/test/e2e/runner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills/test/e2e/specs/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mine.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mine.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/swiper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/swiper.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -311,49 +21,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="header.vue" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/header.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.vue" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/home.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="127">
-                  <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#459#488#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/store/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="125">
-                  <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="mine.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/mine.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/search.vue">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="sideBar.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/sideBar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -374,6 +66,8 @@
       <find>Proxy</find>
       <find>vue-loader</find>
       <find>isRellyShow</find>
+      <find>changeData</find>
+      <find>change</find>
       <find>showSide</find>
     </findStrings>
     <replaceStrings>
@@ -417,9 +111,12 @@
         <option value="$PROJECT_DIR$/music/src/main.js" />
         <option value="$PROJECT_DIR$/music/src/store/index.js" />
         <option value="$PROJECT_DIR$/music/src/components/header.vue" />
-        <option value="$PROJECT_DIR$/src/components/sideBar.vue" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/components/swiper.vue" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/src/components/sideBar.vue" />
         <option value="$PROJECT_DIR$/src/components/header.vue" />
+        <option value="$PROJECT_DIR$/src/components/mine.vue" />
       </list>
     </option>
   </component>
@@ -471,6 +168,12 @@
               <item name="vue-music" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vue-music" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vue-music" type="b2602c69:ProjectViewProjectNode" />
@@ -560,24 +263,25 @@
       <workItem from="1533952352519" duration="380000" />
       <workItem from="1533952757141" duration="2357000" />
       <workItem from="1534078176820" duration="1430000" />
-      <workItem from="1534092582677" duration="3596000" />
+      <workItem from="1534092582677" duration="8723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68543000" />
+    <option name="totallyTimeSpent" value="73670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23749007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13661636" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.36324787" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.36324787" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
@@ -591,22 +295,22 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23828125" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23749007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.015172414" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36324787" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -640,59 +344,85 @@
     <entry file="file://$PROJECT_DIR$/music/config/index.js" />
     <entry file="file://$PROJECT_DIR$/music/build/webpack.dev.conf.js" />
     <entry file="file://$PROJECT_DIR$/music/package.json" />
-    <entry file="file://$PROJECT_DIR$/src/components/swiper.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/play.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mine.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/sideBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/player.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/search.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/swiper.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-end-line="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#140#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
           <folding>
             <element signature="e#459#488#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#78#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="69">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/mine.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="250">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/sideBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,7 @@
 <template>
-    <div id="app"></div>
+    <div id="mine">
+
+    </div>
 </template>
 <script>
     export default {
@@ -14,6 +16,6 @@
     }
 </script>
 
-<style lang="scss"scoped>
+<style scoped>
 
 </style>

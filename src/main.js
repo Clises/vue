@@ -7,7 +7,6 @@ import '../src/assets/common/common.css'/*引入公共样式*/
 
 import {store} from './store/index'
 
-
 import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
 Vue.use(Vant);
