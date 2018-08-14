@@ -1,29 +1,34 @@
 <template>
-    <div id="player">
-      <aplayer autoplay :music="{
-  url: 'http://devtest.qiniudn.com/Preparation.mp3',
-}"
-      >
-      </aplayer>
-      /
-    </div>
+  <div id="play">
+    <audio :src="list.url" controls="controls"></audio>
+
+  </div>
 </template>
 <script>
-  import Aplayer from 'vue-aplayer'
-  export default {
-        data() {
-            return {}
-        },
-        methods: {},
-        components: {
-          Aplayer
-        },
-        mounted() {
-
-        }
+    import api from '@/api/api'
+    export default {
+    data(){
+      return{
+        list:[]
+      }
+    },
+    mounted(){
+      console.log(this.$route.params);  /*获取动态路由传值*/
+      var aid=this.$route.params.aid;
+      //调用请求数据的方法
+      this.requestData(aid);
+    },
+    methods:{
+      requestData(aid){
+        this.$http.get(api.playApi+aid).then((response)=>{
+          this.list=response.data[0];
+        },(err)=>{
+          console.log(err)
+        })
+      }
     }
+  }
 </script>
 
-<style lang="scss"scoped>
-
+<style scoped>
 </style>

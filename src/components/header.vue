@@ -4,7 +4,7 @@
       <span class="iconfont icon-menu">
       </span>
     </div>
-    <router-link to="/my">my</router-link>
+    <router-link to="/mine">mine</router-link>
     <router-link to="/home">home</router-link>
     <router-link to="/search">search</router-link>
     <slideBar></slideBar>

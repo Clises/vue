@@ -1,13 +1,18 @@
 <template>
-    <div id="app"></div>
+    <div id="search">
+      <Header></Header>
+    </div>
 </template>
 <script>
-    export default {
+  import Header from './header'
+  export default {
         data() {
             return {}
         },
         methods: {},
-        components: {},
+        components: {
+          Header
+        },
         mounted() {
 
         }

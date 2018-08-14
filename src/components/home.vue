@@ -2,23 +2,23 @@
   <div id="home">
     <Header></Header>
     <Swiper></Swiper>
-    <p>最新音乐</p>
+    <!--<p>最新音乐</p>-->
+<!--
     <div class="item">
       <div v-for="item in list" class="list">
         <img :src=item.song.album.picUrl alt="">
         <p>{{item.song.name}}</p>
         <p>{{item.song.artists[0].name}}</p>
-        <!--<span class="iconfont icon-iconset0481"></span>-->
       </div>
     </div>
-
+-->
   </div>
 </template>
 <script>
-  // import { mapMutations, mapGetters } from 'vuex'
+  import api from '../api/api'
   import Header from './header'
   import Swiper from './swiper'
-  import api from '../api/api'
+  import {mapGetters } from 'vuex'
   export default {
     name: 'Home',
     created() {
@@ -29,16 +29,17 @@
         list: [],
       }
     },
-    // computed: {
-    //   ...mapGetters([
-    //     'reloads',
-    //     'activeId'
-    //   ]),
-    // },
+    computed: {
+      ...mapGetters([
+        'reloads',
+        'activeId'
+      ]),
+    },
     methods:{
-      // reload () {
-      //   window.location.reload();
-      // },
+      //页面刷新
+      reload () {
+        window.location.reload();
+      },
       getNewSongList() {
         api.getNewSong().then((res) => {
           this.list=res.result;
@@ -49,12 +50,13 @@
     components: {
       Header,Swiper
     },
-    // mounted(){
-    //   if(this.reloads){
-    //     this.$store.commit('setReload',false);
-    //     window.location.reload();
-    //   }
-    // },
+    mounted(){
+
+      if(this.reloads){
+        this.$store.commit('setReload',false);
+        window.location.reload();
+      }
+    },
   }
 </script>
 <style lang="css"scoped>

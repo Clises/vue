@@ -14,7 +14,6 @@
       </div>
     </transition>
   </div>
-
 </template>
 <script>
   import {mapGetters} from 'vuex'
@@ -38,7 +37,6 @@
       isRellyShow() {
           return this.$store.getters.isShowMethod;
         },
-
     },
     watch: {
       'userData': {
@@ -72,7 +70,7 @@
   .side-content {
     z-index: 11;
     position: fixed;
-    width: 286px;
+    width: 350px;
     height: 100%;
     background: #e5e5e5;
     top: 0;
@@ -96,8 +94,8 @@
 
   .slide-fade-enter, .slide-fade-leave-to {
     opacity: 0;
-    -webkit-transform: translate(-286px, 0px);
-    transform: translate(-286px, 0px);
+    -webkit-transform: translate(-350px, 0px);
+    transform: translate(-350px, 0px);
     -webkit-transition: opacity 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out;
   }

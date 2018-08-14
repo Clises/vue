@@ -10,6 +10,8 @@ export const store=new Vuex.Store({
       profile:{
         avatarUrl:'../../static/img/user.png',
         nickname:'',
+        userId:''
+
       },
       account:{
         createTime:'',
@@ -22,6 +24,8 @@ export const store=new Vuex.Store({
   getters:{
     //用户数据
     userData:state=>state.userData,
+    //页面刷新
+    reloads:state=>state.reloads,
     //侧滑
     isShowMethod:state=>state.isShow
   },
@@ -35,6 +39,7 @@ export const store=new Vuex.Store({
   },
   mutations:{
     setUserData:(state,data)=>{state.userData=data},
+    setReload:(state,data)=>{state.reloads=data},
     showBar:state=>{state.isShow=true},
     hideBar:state=>{state.isShow=false},
 

@@ -3,12 +3,30 @@
     <div class="swiper-bg"></div>
     <div class="swiper-containers">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in data" :key="item.targetId">
+        <div class="swiper-slide" v-for="item in data">
           <img :src="item.picUrl">
         </div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-paginations"></div>
+    </div>
+    <div class="recommend">
+      <div class="type">
+        <i></i>
+        <span>私人FM</span>
+      </div>
+      <div class="type">
+        <i></i>
+        <span>每日推荐</span>
+      </div>
+      <div class="type">
+        <i></i>
+        <span>歌单</span>
+      </div>
+      <div class="type">
+        <i></i>
+        <span>排行榜</span>
+      </div>
     </div>
   </div>
 </template>
@@ -57,7 +75,7 @@
 </script>
 
 <style lang="scss" type="text/scss" scoped>
-  .swiper-bg{
+  .swiper-bg {
     width: 100%;
     height: 160px;
     background: red;
@@ -68,7 +86,6 @@
   }
   .swiper {
     width: 100%;
-    height: 200px;
     text-align: center;
     margin-top: 75px;
   }
@@ -81,13 +98,33 @@
     overflow: hidden;
     z-index: 1;
   }
+
   .swiper-wrapper,
-  .swiper-slide img{
+  .swiper-slide img {
     width: 100%;
     height: 100%;
   }
+
   .swiper-paginations {
     position: absolute;
     z-index: 2;
+  }
+
+  .recommend {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  i {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: red;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  span{
+    display: inline-block;
+    margin-top: 10px;
   }
 </style>
