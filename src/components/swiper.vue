@@ -113,6 +113,7 @@
   .recommend {
     display: flex;
     align-items: center;
+    margin-top: 20px;
     justify-content: space-around;
   }
   i {
@@ -121,7 +122,7 @@
     height: 70px;
     background: red;
     border-radius: 50%;
-    margin-top: 20px;
+    margin:0 auto;
   }
   span{
     display: inline-block;
