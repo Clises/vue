@@ -2,9 +2,20 @@
     <div id="mine">
       <Header></Header>
       我创建的歌单{{myEstablish.length}}个<br/>
-      我喜欢的音乐 {{mylove}}首<br/>
+      <div v-for="item in myEstablish" class="list">
+        <router-link :to="{path:'/list',query:{id:item.id}}">
+        <span>{{item.name}}</span>
+        <span>{{item.trackCount}}</span>
+        </router-link>
+      </div>
+      <br/>
       我收藏的歌单{{myCollected.length}}个
-
+      <div v-for="item in myCollected" class="list">
+        <router-link :to="{path:'/list',query:{id:item.id}}">
+        <span>{{item.name}}</span>
+        <span>{{item.trackCount}}</span>
+        </router-link>
+      </div>
     </div>
 </template>
 <script>
@@ -18,7 +29,6 @@
         data() {
             return {
               list:'',
-              mylove:'',
               myEstablish:[],
               myCollected:[]
             }
@@ -43,8 +53,6 @@
                   this.myCollected.push(res.playlist[key])
                 }
               }
-            this.mylove=res.playlist[0].trackCount
-
             })
           }
         },
@@ -52,7 +60,10 @@
           Header
         },
         mounted() {
-
+          //如果
+          if(this.userData.first){
+            this.$router.replace('/')
+          }
         }
     }
 </script>
@@ -61,4 +72,10 @@
 #mine{
   padding-top: 100px;
 }
+  .list{
+    width: 100%;
+    height: 50px;
+    border: 1px solid red;
+    line-height: 50px;
+  }
 </style>

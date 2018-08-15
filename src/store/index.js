@@ -11,7 +11,6 @@ export const store=new Vuex.Store({
         avatarUrl:'../../static/img/user.png',
         nickname:'',
         userId:''
-
       },
       account:{
         createTime:'',
@@ -19,7 +18,27 @@ export const store=new Vuex.Store({
       first:true
     },
     //侧滑
-    isShow:false
+    isShow:false,
+    //歌曲信息
+    songsInfo:{
+      id:'',
+      name:'歌曲名称',
+      // ar:[
+      //   {name:'专辑'}
+      // ],
+      // al:{
+        // name:'歌手',
+        // picUrl:'../../static/img/music.png'
+      // }
+    },
+    list:{
+      playlist:{
+        name:'',
+        coverImgUrl:'',
+        first:true
+      }
+    }
+
   },
   getters:{
     //用户数据
@@ -27,7 +46,36 @@ export const store=new Vuex.Store({
     //页面刷新
     reloads:state=>state.reloads,
     //侧滑
-    isShowMethod:state=>state.isShow
+    isShowMethod:state=>state.isShow,
+    //歌曲详情信息
+    songsInfo:state=>state.songsInfo,
+    //歌单列表信息
+    list:state=>state.list,
+
+
+  },
+  mutations:{
+    setUserData:(state,data)=>{state.userData=data},
+    setReload:(state,data)=>{state.reloads=data},
+    showBar:state=>{state.isShow=true},
+    hideBar:state=>{state.isShow=false},
+    setList:(state,data)=>{state.list=data},
+    setSongsInfo:(state,data)=>{
+      state.songsInfo=data;
+      var check=false;
+      state.playList.forEach(function(e,i){
+        if(data.id==e.id){
+          check=true;
+        }
+      })
+      if(!check){
+        state.currentIndex = state.playList.length;
+        state.playList.push(state.songsInfo);
+      }
+
+    },
+
+
   },
   actions:{
     showSideBar({commit}){
@@ -36,12 +84,6 @@ export const store=new Vuex.Store({
     hideSideBar({commit}){
       commit('hideBar')
     }
-  },
-  mutations:{
-    setUserData:(state,data)=>{state.userData=data},
-    setReload:(state,data)=>{state.reloads=data},
-    showBar:state=>{state.isShow=true},
-    hideBar:state=>{state.isShow=false},
 
   },
   });

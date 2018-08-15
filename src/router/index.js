@@ -7,6 +7,7 @@ import Login from '@/components/Login'
 import home from '@/components/home'
 import mine from '@/components/mine'
 import search from '@/components/search'
+import List from '@/components/list'
 
 const routes = [
   {
@@ -26,6 +27,14 @@ const routes = [
     path: '/search',
     component: search
   },
+  {
+    path: '/list',
+    name: 'List',
+    component: List,
+    meta: {
+      keepAlive: true // 需要被缓存
+    }
+  }
   // {path: '/play/:aid', component: play},
   //默认跳转路由
   // {

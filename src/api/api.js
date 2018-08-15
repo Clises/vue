@@ -10,12 +10,15 @@ export const Swipe=()=>get('/banner')
 //登录之后推荐音乐
 
 
-//mine
+//获取用户歌单列表
 export const mySongList=(params)=>get('/user/playlist',params)
 
+//获得歌单详情
+export const mySong=(params)=>get('/playlist/detail',params)
 export default {
   getNewSong,
   Login,
   Swipe,
-  mySongList
+  mySongList,
+  mySong
 }

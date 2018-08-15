@@ -1,9 +1,11 @@
 <template>
     <div id="app">
       <router-view/>
+      <!--<player></player>-->
     </div>
 </template>
 <script>
+  import player from '../src/components/player'
   export default {
         data() {
             return {}
@@ -12,6 +14,7 @@
         mounted() {
         },
         components:{
+          player
         }
     }
 </script>
