@@ -1,22 +1,17 @@
 <template>
   <div id="home">
-    <Header></Header>
-    <Swiper></Swiper>
-    <!--<p>最新音乐</p>-->
-<!--
-    <div class="item">
-      <div v-for="item in list" class="list">
-        <img :src=item.song.album.picUrl alt="">
-        <p>{{item.song.name}}</p>
-        <p>{{item.song.artists[0].name}}</p>
-      </div>
-    </div>
--->
+    <!--swiper-->
+      <Swiper></Swiper>
+    <!--推荐-->
+    <div class="recommend"></div>
+    <!--推荐歌单-->
+    <div class="songList"></div>
+    <!--最新音乐-->
+    <div class="newSong"></div>
   </div>
 </template>
 <script>
   import api from '../api/api'
-  import Header from './header'
   import Swiper from './swiper'
   import {mapGetters } from 'vuex'
   export default {
@@ -48,7 +43,7 @@
 
     },
     components: {
-      Header,Swiper
+      Swiper
     },
     mounted(){
 
@@ -61,8 +56,15 @@
 </script>
 <style lang="css"scoped>
   #home{
-    padding: 10px;
-  }
+   display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+
+
   .item{
     display: flex;
     justify-content: space-around;

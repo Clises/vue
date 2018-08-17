@@ -20,6 +20,7 @@ export const store=new Vuex.Store({
     //侧滑
     isShow:false,
     //歌曲信息
+    url:'',
     songsInfo:{
       id:'',
       name:'歌曲名称',
@@ -45,18 +46,21 @@ export const store=new Vuex.Store({
     userData:state=>state.userData,
     //页面刷新
     reloads:state=>state.reloads,
+    url:state=>state.url,
     //侧滑
     isShowMethod:state=>state.isShow,
     //歌曲详情信息
     songsInfo:state=>state.songsInfo,
     //歌单列表信息
     list:state=>state.list,
-
+    //url
 
   },
   mutations:{
     setUserData:(state,data)=>{state.userData=data},
     setReload:(state,data)=>{state.reloads=data},
+    //存储音乐地址
+    setUrl:(state,data)=>{state.url=data},
     showBar:state=>{state.isShow=true},
     hideBar:state=>{state.isShow=false},
     setList:(state,data)=>{state.list=data},

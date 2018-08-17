@@ -1,10 +1,12 @@
 <template>
     <div id="app">
-      <router-view/>
-      <!--<player></player>-->
+      <Header></Header>
+      <router-view class="content"></router-view>
+      <player class="footer"></player>
     </div>
 </template>
 <script>
+  import Header from '../src/components/header'
   import player from '../src/components/player'
   export default {
         data() {
@@ -14,14 +16,28 @@
         mounted() {
         },
         components:{
+          Header,
           player
+          // bottom
         }
     }
 </script>
 
 <style scoped>
-  @import 'assets/css/vant.css';
   #app{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
-
+  .content{
+    flex: 1 1 auto;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    overflow: auto;
+  }
 </style>

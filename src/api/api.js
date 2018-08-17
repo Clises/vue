@@ -15,10 +15,15 @@ export const mySongList=(params)=>get('/user/playlist',params)
 
 //获得歌单详情
 export const mySong=(params)=>get('/playlist/detail',params)
+
+//获取音乐详情
+export const musicUrl=(params)=>get('/music/url',params)
+
 export default {
   getNewSong,
   Login,
   Swipe,
   mySongList,
-  mySong
+  mySong,
+  musicUrl
 }

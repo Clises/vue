@@ -28,6 +28,9 @@
     methods: {
       hideSide: function () {
         this.$store.dispatch('hideSideBar');
+        var mo=function(e){e.preventDefault();};
+        document.body.style.overflow='';//出现滚动条
+        document.removeEventListener("touchmove",mo,false);
       },
     },
     computed: {
@@ -51,6 +54,7 @@
         this.avatarUrl=this.userData.profile.avatarUrl,
         this.nickname=this.userData.profile.nickname
       }
+
     }
   }
 </script>
@@ -63,12 +67,12 @@
     bottom: 0;
     right: 0;
     opacity: 1;
-    z-index: 10;
+    z-index: 99;
     background: rgba(0, 0, 0, 0.5);
   }
 
   .side-content {
-    z-index: 11;
+    z-index: 100;
     position: fixed;
     width: 350px;
     height: 100%;

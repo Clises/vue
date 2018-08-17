@@ -3,7 +3,7 @@
     <div class="swiper-bg"></div>
     <div class="swiper-containers">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in data">
+        <div class="swiper-slide" v-for="item in data" :key="item.targetId">
           <img :src="item.picUrl">
         </div>
       </div>
@@ -80,14 +80,12 @@
     height: 160px;
     background: red;
     position: absolute;
-    top: 75px;
     left: 0;
     right: 0;
   }
   .swiper {
-    width: 100%;
+    width: 95%;
     text-align: center;
-    margin-top: 75px;
   }
   .swiper-containers {
     width: 100%;

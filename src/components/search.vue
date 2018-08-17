@@ -1,6 +1,5 @@
 <template>
     <div id="search">
-      <Header></Header>
     </div>
 </template>
 <script>

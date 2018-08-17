@@ -3,7 +3,7 @@
     <div class="backs" @click="back">
     </div>
     <div class="login-content">
-      <input class="login-input" type="text" v-model="msg.phone" placeholder="请输入手机号">
+      <input class="login-input" type="tel" autofocus="autofocus" v-model="msg.phone" placeholder="请输入手机号">
     </div>
     <div class="login-content">
       <input class="login-input" type="password" v-model="msg.password" placeholder="请输入密码">

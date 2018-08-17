@@ -1,6 +1,5 @@
 <template>
     <div id="mine">
-      <Header></Header>
       我创建的歌单{{myEstablish.length}}个<br/>
       <div v-for="item in myEstablish" class="list">
         <router-link :to="{path:'/list',query:{id:item.id}}">
@@ -60,7 +59,7 @@
           Header
         },
         mounted() {
-          //如果
+          //如果没有用户数据返回
           if(this.userData.first){
             this.$router.replace('/')
           }
@@ -69,9 +68,6 @@
 </script>
 
 <style lang="scss" type="text/scss" scoped>
-#mine{
-  padding-top: 100px;
-}
   .list{
     width: 100%;
     height: 50px;

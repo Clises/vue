@@ -21,6 +21,9 @@
     methods: {
       showSide() {
         this.$store.dispatch('showSideBar')
+        var mo=function(e){e.preventDefault();};
+        document.body.style.overflow='hidden';
+        document.addEventListener("touchmove",mo,false);//禁止页面滑动
       },
     },
     components: {
@@ -32,18 +35,15 @@
 </script>
 
 <style lang="scss" scoped>
-
   nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+    flex: 0 0 auto;
     width: 100%;
     height: 75px;
     background: red;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    z-index: 99;
+    z-index: 96;
   }
   .icon-menu{
     font-size: .4rem;
