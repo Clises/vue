@@ -3,7 +3,24 @@
     <!--swiper-->
       <Swiper></Swiper>
     <!--推荐-->
-    <div class="recommend"></div>
+    <div class="recommend">
+      <div class="type">
+      <i></i>
+      <span>私人FM</span>
+    </div>
+      <div class="type">
+        <i></i>
+        <span>每日推荐</span>
+      </div>
+      <div class="type">
+        <i></i>
+        <span>歌单</span>
+      </div>
+      <div class="type">
+        <i></i>
+        <span>排行榜</span>
+      </div>
+    </div>
     <!--推荐歌单-->
     <div class="songList"></div>
     <!--最新音乐-->
@@ -56,27 +73,29 @@
 </script>
 <style lang="css"scoped>
   #home{
-   display: flex;
-    align-items: flex-start;
-    justify-content: center;
     width: 100%;
     height: 100%;
     position: relative;
+    padding: 0 15px 0 15px;
     }
-
-
-  .item{
+  .recommend {
     display: flex;
+    align-items: center;
+    margin-top: 20px;
     justify-content: space-around;
-    flex-wrap: wrap;
+    text-align: center;
+
   }
-  .list{
-    width: 32%;
-    height: 3rem;
-    margin-top: .1rem;
+ .recommend i {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: red;
+    border-radius: 50%;
+    margin:0 auto;
   }
-  img{
-    width: 100%;
-    border-radius:5px;
+  .recommend span{
+    display: inline-block;
+    margin-top: 10px;
   }
 </style>

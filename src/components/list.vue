@@ -66,8 +66,8 @@
   }
 .list{
   border: 1px solid red;
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
+  line-height: 100px;
 }
 .back
 {

@@ -114,7 +114,6 @@
     height: 75px;
     display: block;
     border-radius: 50%;
-    background: red;
     margin-top: 50px;
   }
   .nickname{

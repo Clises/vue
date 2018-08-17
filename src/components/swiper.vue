@@ -1,32 +1,13 @@
 <template>
-  <div class="swiper">
-    <div class="swiper-bg"></div>
+  <div id="swiper">
     <div class="swiper-containers">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in data" :key="item.targetId">
+        <div class="swiper-slide" v-for="item in data">
           <img :src="item.picUrl">
         </div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-paginations"></div>
-    </div>
-    <div class="recommend">
-      <div class="type">
-        <i></i>
-        <span>私人FM</span>
-      </div>
-      <div class="type">
-        <i></i>
-        <span>每日推荐</span>
-      </div>
-      <div class="type">
-        <i></i>
-        <span>歌单</span>
-      </div>
-      <div class="type">
-        <i></i>
-        <span>排行榜</span>
-      </div>
     </div>
   </div>
 </template>
@@ -44,6 +25,7 @@
       Swipe().then((res) => {
         if (res.code == 200) {
           this.data = res.banners;
+          console.log(res.banners)
         }
       })
     },
@@ -54,20 +36,22 @@
         pagination: '.swiper-paginations',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        slidesPerView: 1,
-        paginationClickable: true,
-        grabCursor: true,
+        slidesPerView: 1,   //容器能够同时显示slides数量
+        loopedSlides:1,
+        // paginationClickable: true, //点击分页器控制Swiper切换
+        grabCursor: true, //手掌形
         observer: true,//修改swiper自己或子元素时，自动初始化swiper
         observeParents: false,//修改swiper的父元素时，自动初始化swiper
         // spaceBetween: 30,
         resistanceRatio: 0,
         loop: true,
-        autoplay: 3000,
-        autoplayDisableOnInteraction: false,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false, //手指触发停止运动
+        //过渡到另外一个slide触发
         onSlideChangeEnd: function (swiper) {
-          swiper.update();
+          swiper.update(); //每次加载完毕更新swiper
           swiper.startAutoplay();
-          swiper.reLoop();
+          swiper.reLoop();  //重新对循环体进行个数计算
         }
       });
     }
@@ -75,7 +59,8 @@
 </script>
 
 <style lang="scss" type="text/scss" scoped>
-  .swiper-bg {
+  #swiper:before{
+    content: "";
     width: 100%;
     height: 160px;
     background: red;
@@ -83,47 +68,19 @@
     left: 0;
     right: 0;
   }
-  .swiper {
-    width: 95%;
-    text-align: center;
-  }
   .swiper-containers {
     width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     overflow: hidden;
     z-index: 1;
   }
-
-  .swiper-wrapper,
   .swiper-slide img {
     width: 100%;
     height: 100%;
   }
-
   .swiper-paginations {
     position: absolute;
     z-index: 2;
-  }
-
-  .recommend {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: space-around;
-  }
-  i {
-    display: block;
-    width: 70px;
-    height: 70px;
-    background: red;
-    border-radius: 50%;
-    margin:0 auto;
-  }
-  span{
-    display: inline-block;
-    margin-top: 10px;
+    text-align: center;
   }
 </style>

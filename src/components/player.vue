@@ -1,7 +1,30 @@
 <template>
   <div id="player">
-    <div class="control" @click="showDetails">
+    <div class="playr-control">
+
+      <audio :src="url" controls=""  autoplay=""  preload="true" ref="player"></audio>
+      <div class="player-info"@click="showDetails">
+
+      </div>
+      <div class="player-bar">
+        <div class="songsMenu" @click="showList">
+        </div>
+        <div class="play" @click="playControl">
+        </div>
+        <div class="next">
+
+        </div>
+
+      </div>
     </div>
+    <!--播放列表-->
+    <transition name="songsList">
+      <div class="player-list-top" v-if="songsList" @click="showList">
+        <div class="player-list-bottom" v-if="songsList">
+        </div>
+      </div>
+    </transition>
+    <!--详情页面-->
     <transition name="slide">
       <div class="details" v-if="details">
         <div class="header">
@@ -58,62 +81,121 @@
     data() {
       return {
         details: false,
-        list: []
+        list: [],
+        songsList:false,
       }
     },
     computed: {
       ...mapGetters([
         'songsInfo',
+        'url'
       ]),
     },
 
     mounted() {
-      // console.log(this.$route.params);  /*获取动态路由传值*/
-      // var aid=this.$route.params.aid;
-      // 调用请求数据的方法
-      // this.requestData(aid);
+      this.player=this.$refs.player;
     },
     methods: {
+      showList(){
+        this.songsList=!this.songsList;
+      },
+      playControl(){
+        if (this.player.paused){
+          this.player.play()
+        }else
+          {
+            this.player.pause()
+        }
+        // if (this.player.paused){
+        //   this.player.play()
+        // }else{
+        //   this.player.paues()
+        // }
+      },
       showDetails() {
         this.details = !this.details;
         var mo=function(e){e.preventDefault();};
         document.body.style.overflow='hidden';
         document.addEventListener("touchmove",mo,false);//禁止页面滑动
-
       },
+
       back() {
         this.details = !this.details;
         var mo=function(e){e.preventDefault();};
         document.body.style.overflow='';//出现滚动条
         document.removeEventListener("touchmove",mo,false);
       }
-      // requestData(aid){
-      //   this.$http.get(api.playApi+aid).then((response)=>{
-      //     this.list=response.data[0];
-      //   },(err)=>{
-      //     console.log(err)
-      //   })
-      // }
     }
   }
 </script>
 
 <style scoped>
-  #player{
-    flex: 0 0 auto;
-    width: 100%;
-    height: 1rem;
+  audio{
+    display: none;
   }
-  .control {
+  .playr-control {
     width: 100%;
     height: 1rem;
     background: rgba(0, 0, 0, 1);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
+
+  }
+  .player-info{
+    width: 60%;
+    height: 100%;
+    background: blue;
+  }
+  .player-bar{
+    width: 40%;
+    height: 100%;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+  }
+  .songsMenu{
+    width: 70px;
+    height: 100%;
+    background: black;
+  }
+  .play{
+    width: 70px;
+    height: 100%;
+    background: white;
+  }
+  .next{
+    width: 70px;
+    height: 100%;
+    background: yellow;
+  }
+  .player-list-top{
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
+  .player-list-bottom{
+    width: 100%;
+    height: 42%;
+    background: rgba(0, 0, 0, 1);
+    position: fixed;
+    left: 0;
+    top: 50%;
+    /*z-index: 99;*/
+    /*color: #f4ea2a;*/
+  }
+
+  #player{
+    flex: 0 0 auto;
+    width: 100%;
+    height: 1rem;
   }
   .details {
     position: fixed;
@@ -137,6 +219,21 @@
   .slide-enter-to, .slide-leave {
     opacity: 1;
     top: 0;
+  }
+
+  .songsList-enter,.songsList-leave-to{
+    opacity: 0;
+     /*top: -50%;*/
+  }
+  .songsList-enter-active{
+    transition: all 0.5s ease 0.4s;
+  }
+  .songsList-leave-active{
+    transition: all 0.5s
+  }
+  .songsList-enter-to,.songsList-leave{
+    opacity: 1;
+     /*top: 0%;*/
   }
 
   .header {
@@ -242,12 +339,4 @@
     margin-top: -8px;
     left: calc(40%)
   }
-
-  /*.control {*/
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*height: 60px;*/
-    /*align-items: center;*/
-  /*}*/
-
 </style>

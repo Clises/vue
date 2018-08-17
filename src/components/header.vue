@@ -27,7 +27,7 @@
       },
     },
     components: {
-      'slideBar': slideBar
+      slideBar
     },
     mounted() {
     }
