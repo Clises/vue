@@ -11,8 +11,6 @@
 <script>
   import api from '../api/api'
   import {mapMutations, mapGetters} from 'vuex'
-  import {store} from "../store";
-
   export default {
     created() {
       this.mySong();
@@ -24,7 +22,8 @@
     computed: {
       ...mapGetters([
         'list',
-        'url'
+        'url',
+        'songsInfo'
       ]),
     },
     methods: {
@@ -34,7 +33,6 @@
           id: query.id
         }).then((res) => {
           this.$store.commit('setList', res);
-
         })
       },
       setUrl(id){
@@ -44,9 +42,16 @@
         }).then((res)=>{
           if (res.code==200){
             this.$store.commit('setUrl',res.data[0].url)
-            console.log(this.url)
           }
         })
+        api.songDetail({
+          ids:id
+        }).then(function (res) {
+          if (res.code==200){
+            this.$store.commit('setSongsInfo',res.data.songs[0])
+          }
+        })
+
       },
       back(){
         history.go(-1)
@@ -54,7 +59,6 @@
     },
     components: {},
     mounted() {
-      console.log(this.url)
     }
   }
 </script>

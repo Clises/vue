@@ -24,13 +24,11 @@
         nickname:''
       }
     },
-
-    methods: {
-      hideSide: function () {
-        this.$store.dispatch('hideSideBar');
-        var mo=function(e){e.preventDefault();};
-        document.body.style.overflow='';//出现滚动条
-        document.removeEventListener("touchmove",mo,false);
+    watch: {
+      'userData': {
+        //添加方法
+        handler: 'changeData',   //绑定 handler方法
+        deep: true  //发现对象内部值的变化
       },
     },
     computed: {
@@ -38,14 +36,15 @@
         'userData',
       ]),
       isRellyShow() {
-          return this.$store.getters.isShowMethod;
-        },
+        return this.$store.getters.isShowMethod;
+      },
     },
-    watch: {
-      'userData': {
-        //添加方法
-        handler: 'changeData',   //绑定 handler方法
-        deep: true  //发现对象内部值的变化
+    methods: {
+      hideSide: function () {
+        this.$store.dispatch('hideSideBar');
+        var mo=function(e){e.preventDefault();};
+        document.body.style.overflow='';//出现滚动条
+        document.removeEventListener("touchmove",mo,false);
       },
     },
     mounted(){

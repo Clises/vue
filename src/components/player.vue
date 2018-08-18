@@ -31,7 +31,7 @@
           <div>
             <span @click="back">返回</span>
             <div class="music">
-              <p class="name">春夏秋冬</p>
+              <p class="name" v-text=""></p>
               <p class="singer">张国荣</p>
             </div>
           </div>
@@ -93,6 +93,7 @@
     },
 
     mounted() {
+      console.log(this.songsInfo)
       this.player=this.$refs.player;
     },
     methods: {

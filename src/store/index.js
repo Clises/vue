@@ -24,13 +24,13 @@ export const store=new Vuex.Store({
     songsInfo:{
       id:'',
       name:'歌曲名称',
-      // ar:[
-      //   {name:'专辑'}
-      // ],
-      // al:{
-        // name:'歌手',
-        // picUrl:'../../static/img/music.png'
-      // }
+      ar:[
+        {name:'专辑'}
+      ],
+      al:{
+        name:'歌手',
+        picUrl:'../../static/img/music.png'
+      }
     },
     list:{
       playlist:{
