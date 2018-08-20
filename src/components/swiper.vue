@@ -25,7 +25,6 @@
       Swipe().then((res) => {
         if (res.code == 200) {
           this.data = res.banners;
-          console.log(res.banners)
         }
       })
     },

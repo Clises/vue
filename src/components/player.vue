@@ -2,7 +2,7 @@
   <div id="player">
     <div class="playr-control">
 
-      <audio :src="url" controls=""  autoplay=""  preload="true" ref="player"></audio>
+      <audio :src="play.url" controls=""  autoplay=""  preload="true" ref="player" @play="playerPlay"></audio>
       <div class="player-info"@click="showDetails">
 
       </div>
@@ -12,9 +12,7 @@
         <div class="play" @click="playControl">
         </div>
         <div class="next">
-
         </div>
-
       </div>
     </div>
     <!--播放列表-->
@@ -31,8 +29,8 @@
           <div>
             <span @click="back">返回</span>
             <div class="music">
-              <p class="name" v-text=""></p>
-              <p class="singer">张国荣</p>
+              <p class="name" v-text="songsInfo.name"></p>
+              <p class="singer" v-text="songsInfo.ar[0].name"></p>
             </div>
           </div>
           <span class="share">分享</span>
@@ -43,7 +41,7 @@
             </div>
             <div class="pause">
             </div>
-            <div class="background">
+            <div class="details-background" :style="topStyle">
               背景
             </div>
           </div>
@@ -65,8 +63,8 @@
           <div class="details-control">
             <span>循环</span>
             <span>上一首</span>
-            <span>暂停</span>
-            <span>下一首</span>
+            <span @click="playControl">暂停</span>
+            <span @click="nextPlay">下一首</span>
             <span>播放列表</span>
           </div>
         </div>
@@ -75,28 +73,53 @@
   </div>
 </template>
 <script>
+  import api from '../api/api'
   import {mapGetters} from 'vuex'
 
   export default {
     data() {
       return {
+        isActive:true,
         details: false,
-        list: [],
+        // list: [],
         songsList:false,
+        topStyle:{
+          backgroundImage: '',
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center center"
+        }
       }
     },
     computed: {
       ...mapGetters([
         'songsInfo',
-        'url'
+        'play',
+        'songsUrl'
       ]),
+    },
+    created() {
     },
 
     mounted() {
-      console.log(this.songsInfo)
+      api.songAlbum({
+        id:this.songsInfo.ar.id
+      }).then((res)=>{
+
+        console.log(res)
+      })
+
       this.player=this.$refs.player;
+      this.topStyle.backgroundImage='url('+this.songsInfo.al.picUrl+')'
+      // this.play.isActive=true;
     },
     methods: {
+
+      playerPlay(){
+        this.playerIcon='../../static/img/pause.png';
+        this.topStyle.backgroundImage='url('+this.songsUrl+')'
+      },
+
       showList(){
         this.songsList=!this.songsList;
       },
@@ -105,13 +128,9 @@
           this.player.play()
         }else
           {
+            this.isActive=false;
             this.player.pause()
         }
-        // if (this.player.paused){
-        //   this.player.play()
-        // }else{
-        //   this.player.paues()
-        // }
       },
       showDetails() {
         this.details = !this.details;
@@ -144,7 +163,6 @@
     position: fixed;
     bottom: 0;
     left: 0;
-
   }
   .player-info{
     width: 60%;
@@ -275,14 +293,17 @@
     transform: translate3d(-16px, 0, 0) rotateZ(-35deg);
   }
 
-  .background {
+  .details-background {
     width: 43vh;
     height: 43vh;
     border-radius: 50%;
     background: black;
     margin: 100px auto;
-    animation: goRotate 16s linear infinite 0.1s;
+    /*animation: goRotate 16s linear infinite 0.1s;*/
+  }
 
+  .active{
+    animation: goRotate 16s linear infinite 0.1s;
   }
 
   @keyframes goRotate {
@@ -303,9 +324,16 @@
     justify-content: space-around;
   }
 
+
+
+
+
+
+  /*details footer*/
   .footer {
     flex: 0 0 auto;
     height: 100px;
+    background: red;
   }
 
   .range {
@@ -339,5 +367,9 @@
     display: inline-block;
     margin-top: -8px;
     left: calc(40%)
+  }
+  .details-control{
+    display: flex;
+    justify-content: space-around;
   }
 </style>

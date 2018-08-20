@@ -3,7 +3,7 @@
     <div class="back" @click="back">
       返回
     </div>
-    <div v-for="item in list.playlist.tracks" class="list" @click="setUrl(item.id)">
+    <div v-for="(item,index) in list.playlist.tracks" class="list" :key="item.id" @click="setUrl(item.id)">
       {{item.name}}
     </div>
   </div>
@@ -13,7 +13,15 @@
   import {mapMutations, mapGetters} from 'vuex'
   export default {
     created() {
-      this.mySong();
+      //我喜欢的音乐列表
+      var that = this;
+      var query = this.$route.query;
+      api.mySong({
+        id: query.id
+      }).then((res) => {
+        that.$store.commit('setList', res);
+
+      })
     },
     data() {
       return {
@@ -22,59 +30,59 @@
     computed: {
       ...mapGetters([
         'list',
-        'url',
         'songsInfo'
       ]),
     },
     methods: {
-      mySong() {
-        var query = this.$route.query;
-        api.mySong({
-          id: query.id
-        }).then((res) => {
-          this.$store.commit('setList', res);
-        })
-      },
-      setUrl(id){
+      setUrl(id) {
+        var that = this;
+        this.$store.commit('setActiveId', id);
         api.musicUrl({
-          id:id,
-          br:'320000'
-        }).then((res)=>{
-          if (res.code==200){
-            this.$store.commit('setUrl',res.data[0].url)
+          id: id,
+          br: '320000'
+        }).then((res) => {
+          if (res.code == 200) {
+            that.$store.commit('setUrl', res.data[0])
           }
         })
         api.songDetail({
-          ids:id
+          ids: id
         }).then(function (res) {
-          if (res.code==200){
-            this.$store.commit('setSongsInfo',res.data.songs[0])
+          if (res.code == 200) {
+            that.$store.commit('setSongsInfo', res.songs[0])
           }
         })
-
+        console.log(this.songsInfo.al)
+        api.songAlbum({
+          id: this.songsInfo.ar[0].id
+        }).then((res)=>{
+          console.log(res.album.picUrl)
+          that.$store.commit('setPicUrl', res.album.picUrl)
+        })
       },
-      back(){
+      back() {
         history.go(-1)
       }
     },
     components: {},
     mounted() {
+
     }
   }
 </script>
 
 <style lang="scss" type="text/scss" scoped>
-  #list{
-
+  #list {
 
   }
-.list{
-  border: 1px solid red;
-  height: 100px;
-  line-height: 100px;
-}
-.back
-{
-  font-size: 60px;
-}
+
+  .list {
+    border: 1px solid red;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .back {
+    font-size: 60px;
+  }
 </style>

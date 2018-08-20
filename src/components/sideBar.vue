@@ -40,6 +40,9 @@
       },
     },
     methods: {
+      changeData(){
+        this.avatarUrl=this.userData.profile.avatarUrl
+      },
       hideSide: function () {
         this.$store.dispatch('hideSideBar');
         var mo=function(e){e.preventDefault();};
