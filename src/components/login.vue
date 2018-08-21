@@ -43,7 +43,7 @@
             this.$router.push("/home");
            window.sessionStorage.setItem('userData',JSON.stringify(res));
           }else if (res.code==502){
-            Toast("res.msg");
+            Toast(res.msg);
           }
           else if (res.code==501){
             Toast(res.msg)

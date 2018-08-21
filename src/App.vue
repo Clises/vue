@@ -40,4 +40,9 @@
     -ms-flex: 1 1 auto;
     overflow: auto;
   }
+  .footer{
+    width: 100%;
+    flex: 0 0 auto;
+    height: 75px;
+  }
 </style>

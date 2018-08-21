@@ -25,6 +25,7 @@
     },
     data() {
       return {
+        test:''
       }
     },
     computed: {
@@ -42,6 +43,7 @@
           br: '320000'
         }).then((res) => {
           if (res.code == 200) {
+            console.log(res)
             that.$store.commit('setUrl', res.data[0])
           }
         })
@@ -52,14 +54,15 @@
             that.$store.commit('setSongsInfo', res.songs[0])
           }
         })
-        console.log(this.songsInfo.al)
         api.songAlbum({
-          id: this.songsInfo.ar[0].id
+          id: this.songsInfo.al.id
         }).then((res)=>{
           console.log(res.album.picUrl)
           that.$store.commit('setPicUrl', res.album.picUrl)
         })
+
       },
+
       back() {
         history.go(-1)
       }

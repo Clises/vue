@@ -21,9 +21,13 @@ export const musicUrl=(params)=>get('/music/url',params)
 
 //获取音乐详情
 export const songDetail=(params)=>get('/song/detail',params)
-//获取专辑内容
 
+//获取专辑内容
 export const songAlbum=(params)=>get('/album',params)
+
+//search
+export const songSearch=(params)=>get('/search',params)
+
 
 
 export default {
@@ -34,5 +38,6 @@ export default {
   mySong,
   musicUrl,
   songDetail,
-  songAlbum
+  songAlbum,
+  songSearch
 }

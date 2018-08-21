@@ -24,6 +24,7 @@ export const store = new Vuex.Store({
     //歌曲信息
     play: {
       url: '',
+      id:''
     },
 
     songsInfo: {

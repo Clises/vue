@@ -11,14 +11,20 @@ import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
 Vue.use(Vant);
 
+// import MuseUI from 'muse-ui'
+// import 'muse-ui/dist/muse-ui.css'
+// Vue.use(MuseUI)
+
+
 // require('swiper/dist/css/swiper.css')
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 // Vue.use(VueAwesomeSwiper)
 
-
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+// Vue.use(ElementUI);
+import util from './util.js'
+Vue.use(util);
 
 
 Vue.config.productionTip = false

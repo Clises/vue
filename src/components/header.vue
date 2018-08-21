@@ -45,6 +45,9 @@
     justify-content: space-around;
     z-index: 96;
   }
+  a{
+    color: black;
+  }
   .icon-menu{
     font-size: .4rem;
   }
