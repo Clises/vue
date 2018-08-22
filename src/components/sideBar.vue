@@ -11,6 +11,9 @@
           {{nickname}}
         </span>
         </div>
+        <div class="exit" @click="exit">
+          退出
+        </div>
       </div>
     </transition>
   </div>
@@ -49,6 +52,23 @@
         document.body.style.overflow='';//出现滚动条
         document.removeEventListener("touchmove",mo,false);
       },
+      exit(){
+
+        window.sessionStorage.removeItem("userData");
+        // this.$store.commit('setUserData',{userData:{
+        //     profile:{
+        //       avatarUrl:'../../static/img/user.png',
+        //       nickname:'',
+        //
+        //     },
+        //     account:{
+        //       createTime:'',
+        //     },
+        //     first:true
+        //   }});
+        this.$store.commit('setReload',true);
+        this.$router.replace('/')
+      }
     },
     mounted(){
       //如果不是第一次加载

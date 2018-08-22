@@ -1,7 +1,7 @@
 <template>
   <div id="player">
     <!--播放-->
-    <div class="player-control">
+    <div class="player-control" :class="ishow ? '' : 'player-control__state'">
       <audio :src="'http://music.163.com/song/media/outer/url?id='+(play.id)+'.mp3'" controls="" autoplay=""
              preload="true" ref="player" @play="playerPlay" @timeupdate='playerTimeUpdate'></audio>
       <div class="player-info" @click="showDetails">
@@ -10,7 +10,9 @@
       </div>
       <!--控制-->
       <div class="player-bar">
-        <div class="play" @click="playControl"></div>
+        <div class="play" @click="playControl">
+          <!--<img :src="playerIcon" alt="">-->
+        </div>
         <div class="songsMenu" @click="showList">
         </div>
       </div>
@@ -42,9 +44,10 @@
           <div class="musicShow">
             <div class="line">
             </div>
-            <div class="pause">
+            <div class="pause" :class="isPlay ? '' : 'pause__state'">
             </div>
-            <div class="details-background">
+            <div class="details-background" :class="isPlay ? 'isRotate' : 'details-background__state'"
+                 :style="topStyle">
             </div>
           </div>
           <div class="musicDo">
@@ -59,13 +62,13 @@
           <div class="range">
             <span class="time" v-text="startTime">00:00</span>
             <van-slider v-model="value" @change="changeTime" class="slider"/>
-            <!--<mu-slider v-model="value" class="slider" @change="changeTime"/>-->
             <span v-text="endTime"></span>
           </div>
           <div class="details-control">
             <span>循环</span>
             <span>上一首</span>
-            <span @click="playControl">暂停</span>
+            <span @click="playControl" v-text="playState">
+            </span>
             <span>下一首</span>
             <span>播放列表</span>
           </div>
@@ -85,10 +88,11 @@
         value: 0,
         startTime: 0,
         endTime: 0,
-        // isActive:true,
+        playState: '暂停',
         details: false,
-        // list: [],
         songsList: false,
+        ishow: false,
+        isPlay: true,
         topStyle: {
           backgroundImage: '',
           backgroundRepeat: "no-repeat",
@@ -97,41 +101,49 @@
         }
       }
     },
-
-    watch: {
-      timeLine(n, o) {
-        this.value = n;
-      },
-      // songsInfo(n,o){
-      //
-      // }
-    },
     computed: {
       ...mapGetters([
         'songsInfo',
         'play',
-        'songsUrl'
+        'songsUrl',
+        'isPlaying'
       ]),
     },
     created() {
     },
+    watch: {
+      timeLine(n, o) {
+        this.value = n;
+      },
+      isPlaying() {
+        if (this.isPlaying == true) {
+          this.ishow = true
+        }
+      }
+    },
+
     mounted() {
-      this.topStyle.backgroundImage = 'url(' + this.songsInfo.al.picUrl + ')'
       this.player = this.$refs.player;
+      console.log(this.songsUrl)
+      this.topStyle.backgroundImage = 'url(' + this.songsUrl + ')'
     },
     methods: {
       playerPlay() {
-        this.playerIcon = '../../static/img/pause.png';
         this.topStyle.backgroundImage = 'url(' + this.songsUrl + ')'
       },
       showList() {
         this.songsList = !this.songsList;
       },
       playControl() {
+        // this.$store.commit('play',false)
         if (this.player.paused) {
           this.player.play()
+          this.playState = '暂停'
+          this.isPlay = true;
         } else {
           this.player.pause()
+          this.playState = '开始'
+          this.isPlay = false;
         }
       },
       showDetails() {
@@ -170,6 +182,7 @@
 
 <style scoped>
 
+  /*******************bottom**********************/
   /*control*/
   .player-control {
     width: 100%;
@@ -179,15 +192,22 @@
     justify-content: flex-start;
     align-items: center;
   }
+
+  .player-control__state {
+    display: none !important;
+  }
+
   audio {
     display: none;
   }
+
   /*音乐信息*/
   .player-info {
     width: 70%;
     height: 100%;
     background: blue;
   }
+
   .timeLine {
     position: absolute;
     bottom: 0;
@@ -196,16 +216,23 @@
     height: 0.03rem;
     background: #f4ea2a;
   }
+  .slider {
+    width: 80%;
+  }
+
+
   .player-bar {
     width: 30%;
     height: 100%;
     display: flex;
   }
+
   .songsMenu {
     width: 50%;
     height: 100%;
     background: black;
   }
+
   .play {
     width: 50%;
     height: 100%;
@@ -222,6 +249,7 @@
     top: 0;
     z-index: 99;
   }
+
   .player-list-bottom {
     width: 100%;
     height: 50%;
@@ -231,6 +259,7 @@
     bottom: 75px;
   }
 
+  /*******************details**********************/
 
   /*details*/
   .details {
@@ -242,36 +271,44 @@
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 98;
+    z-index: 100;
     background: white;
-    padding:0 20px 0 20px;
+    padding: 0 20px 0 20px;
   }
+
   .slide-enter, .slide-leave-to {
     opacity: 0;
     top: 100%;
   }
+
   .slide-enter-active, .slide-leave-active {
     transition: all 0.3s;
   }
+
   .slide-enter-to, .slide-leave {
     opacity: 1;
     top: 0;
   }
+
   .songsList-enter, .songsList-leave-to {
     opacity: 0;
     /*top: -50%;*/
   }
+
   .songsList-enter-active {
     transition: all 0.5s ease 0.4s;
   }
+
   .songsList-leave-active {
     transition: all 0.5s
   }
+
   .songsList-enter-to, .songsList-leave {
     opacity: 1;
     /*top: 0%;*/
   }
-/*details-header*/
+
+  /*header*/
   .header {
     flex: 0 0 auto;
     display: flex;
@@ -280,11 +317,13 @@
     background-color: white;
     justify-content: space-between;
     position: relative;
-    z-index: 999;
+    z-index: 99;
   }
+
   .music-info {
     display: inline-block;
   }
+
   .content {
     flex: 1 1 auto;
     display: flex;
@@ -293,20 +332,25 @@
     justify-content: space-between;
     position: relative;
   }
+
+  /*******************musicShow**********************/
   .musicShow {
     width: 100%;
     height: 55vh;
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
+
   .line {
     width: 80%;
     height: 5px;
-    background: black;
     z-index: 11;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /*background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));*/
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
   }
 
   .pause {
@@ -321,6 +365,8 @@
     top: -15px;
     z-index: 10;
     left: 50%;
+  }
+  .pause__state {
     transform: translate3d(-16px, 0, 0) rotateZ(-30deg);
   }
 
@@ -329,25 +375,25 @@
     height: 37vh;
     border-radius: 50%;
     background: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*animation: goRotate 16s linear infinite 0.1s;*/
+    align-self: center;
   }
 
-  /*@keyframes goRotate {*/
-  /*0% {*/
-  /*transform: rotate(0)*/
-  /*}*/
-  /*50% {*/
-  /*transform: rotate(180deg)*/
-  /*}*/
-  /*100% {*/
-  /*transform: rotate(360deg)*/
-  /*}*/
-  /*}*/
+  .details-background__state {
+    animation: goRotate 16s linear infinite 0.1s;
 
+  }
+
+  @keyframes goRotate {
+    0% {
+      transform: rotate(0)
+    }
+    50% {
+      transform: rotate(180deg)
+    }
+    100% {
+      transform: rotate(360deg)
+    }
+  }
   .musicDo {
     width: 100%;
     height: 100px;
@@ -361,15 +407,13 @@
     flex: 0 0 auto;
     height: 200px;
   }
+
   .range {
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
-  .slider {
-    width: 80%;
   }
   .details-control {
     height: 100px;

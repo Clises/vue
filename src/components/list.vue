@@ -20,7 +20,6 @@
         id: query.id
       }).then((res) => {
         that.$store.commit('setList', res);
-
       })
     },
     data() {
@@ -31,7 +30,8 @@
     computed: {
       ...mapGetters([
         'list',
-        'songsInfo'
+        'songsInfo',
+        'isPlaying'
       ]),
     },
     methods: {
@@ -43,8 +43,9 @@
           br: '320000'
         }).then((res) => {
           if (res.code == 200) {
-            console.log(res)
             that.$store.commit('setUrl', res.data[0])
+            that.$store.commit('play',true)
+            // console.log(this.isPlaying)
           }
         })
         api.songDetail({
